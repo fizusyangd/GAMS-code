@@ -1,0 +1,24 @@
+B 3 C o m p i l a t i o n
+B 11 Model Statistics    SOLVE transportation Using MINLP From line 88
+B 26 Solution Report     SOLVE transportation Using MINLP From line 88
+F 170 Cost
+F 172 cstr1
+F 177 cstr2
+F 198 cstr3
+F 219 cstr4
+F 240 cstr5
+F 249 cstr6
+F 262 eqn1
+F 331 eqn2
+F 352 eqn3
+G 373 X
+G 442 V
+G 511 X5
+G 534 OBJ
+G 536 D
+G 605 C5
+G 626 Cdash
+B 654 E x e c u t i o n
+I 654 X
+I 676 V
+I 691 Cdash
