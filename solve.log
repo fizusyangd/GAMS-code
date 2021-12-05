@@ -1,0 +1,408 @@
+--- Job MODEL.gms Start 12/05/21 02:27:12 37.1.0 r07954d5 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /opt/gams/37.1.0/gmsprmun.txt
+    /opt/gams/37.1.0/gamsconfig.yaml
+--- GAMS Parameters defined
+    Input /var/lib/condor/execute/dir_40972/gamsexec/MODEL.gms
+    Output /var/lib/condor/execute/dir_40972/gamsexec/solve.lst
+    PageWidth 79
+    PageSize 0
+    ScrDir /var/lib/condor/execute/dir_40972/neos-40980/
+    SysDir /opt/gams/37.1.0/
+    CurDir /var/lib/condor/execute/dir_40972/gamsexec/
+    LogOption 4
+    LogFile /var/lib/condor/execute/dir_40972/gamsexec/solve.log
+    AppendOut 1
+    AppendLog 0
+    Suppress 0
+    CErr 10
+    LimRow 0
+    LimCol 0
+    IDE 1
+    GDX /var/lib/condor/execute/dir_40972/gamsexec/out.gdx
+    ExecMode 3
+    gdxCompress 1
+    Solver dicopt
+Licensee: NEOS Server License prod-exec-5.neos-server.orgS211112/0001AB-GEN
+          mac@f0:1f:af:d3:59:c4                                      DCE917
+          /opt/gams/37.1.0/gamslice.txt
+          Evaluation license: Not for commercial or production use
+Processor information: 2 socket(s), 12 core(s), and 24 thread(s) available
+GAMS 37.1.0   Copyright (C) 1987-2021 GAMS Development. All rights reserved
+--- Starting compilation
+--- MODEL.gms(90) 3 Mb[FIL:"/var/lib/condor/execute/dir_40972/gamsexec/MODEL.gms",90,0]
+--- Starting execution: elapsed 0:00:00.003[LST:10]
+--- Generating MINLP model transportation[LST:10]
+--- MODEL.gms(88) 6 Mb[FIL:"/var/lib/condor/execute/dir_40972/gamsexec/MODEL.gms",88,0]
+---   153 rows  241 columns  689 non-zeroes
+---   242 nl-code  160 nl-non-zeroes
+---   144 discrete-columns
+--- MODEL.gms(88) 4 Mb[FIL:"/var/lib/condor/execute/dir_40972/gamsexec/MODEL.gms",88,0]
+--- Executing DICOPT (Solvelink=2): elapsed 0:00:00.006[LST:13]
+-------------------------------------------------------------------------------
+Dicopt 2         37.1.0 r07954d5 Released Nov 11, 2021 LEG x86 64bit/Linux    
+-------------------------------------------------------------------------------
+by Aldo Vecchietti, Director del Instituto INGAR,
+   CONICET, UTN, Santa Fe, Argentina
+by Ignacio E. Grossmann, Chemical Engineering Faculty,
+   Carnegie Mellon University, Pittsburgh, PA, USA
+-------------------------------------------------------------------------------
+--- WARNING: 144 missing bounds on discrete variables.
+---   In an integer cut, DICOPT will assume a bound of +/-1.000000e+04.
+---   You can change this value by setting the option 'infbnd'.
+--- DICOPT: Starting major iteration 1
+--- DICOPT: Setting up first (relaxed) NLP.
+
+CONOPT 3         37.1.0 r07954d5 Released Nov 11, 2021 LEG x86 64bit/Linux    
+
+ 
+ 
+    C O N O P T 3   version 3.17K
+    Copyright (C)   ARKI Consulting and Development A/S
+                    Bagsvaerdvej 246 A
+                    DK-2880 Bagsvaerd, Denmark
+ 
+ 
+   Iter Phase Ninf   Infeasibility   RGmax    NSB   Step InItr MX OK
+      0   0        2.3863615779E+04 (Input point)
+ 
+                   Pre-triangular equations:   96
+                   Post-triangular equations:  1
+ 
+      1   0        2.2420000000E+04 (After pre-processing)
+      2   0        4.7812500000E+01 (After scaling)
+      6   1     4  3.4414849074E+00 2.0E-03    61 1.0E+00   19 T  T
+ 
+ ** Feasible solution. Value of objective =    191893.921652
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+     11   3        1.6270606959E+05 4.1E+02    38 1.0E+00   26 T  T
+     14   3        1.5210699720E+05 0.0E+00    24
+ 
+ ** Optimal solution. Reduced gradient less than tolerance.
+ 
+--- DICOPT: Setting up first MIP
+
+FICO-Xpress      37.1.0 r07954d5 Released Nov 11, 2021 LEG x86 64bit/Linux    
+
+Xpress Optimizer 38.01
+Xpress Solver 64bit v8.12.4 Oct  7 2021
+(c) Copyright Fair Isaac Corporation 1983-2020. All rights reserved
+Licensed for use by: GAMS Development Corp. for GAMS
+
+--- GMO setup time: 0.00s
+ 
+Reading Problem GAMS Model
+Problem Statistics
+         153 (      0 spare) rows
+         243 (      0 spare) structural columns
+         632 (     59 spare) non-zero elements
+Global Statistics
+         144 entities        0 sets        0 set members
+FICO Xpress v8.12.4, Hyper, solve started 2:27:12, Dec 5, 2021
+Heap usage: 129KB (peak 129KB, 355KB system)
+Minimizing MILP GAMS Model with these control settings:
+LPITERLIMIT = 2147483633
+MAXTIME = -2147483647
+THREADS = 1
+MIPABSSTOP = 0
+MIPRELSTOP = 0
+Original problem has:
+       153 rows          243 cols          632 elements       144 globals
+Presolved problem has:
+        50 rows          144 cols          328 elements       144 globals
+LP relaxation tightened
+Presolve finished in 0 seconds
+Heap usage: 224KB (peak 314KB, 358KB system)
+
+Coefficient range                    original                 solved        
+  Coefficients   [min,max] : [ 1.00e+00,  8.00e+02] / [ 5.00e-01,  1.50e+00]
+  RHS and bounds [min,max] : [ 2.00e+00,  7.73e+04] / [ 2.80e+02,  1.25e+03]
+  Objective      [min,max] : [ 1.00e+00,  1.00e+03] / [ 1.00e+00,  4.96e+01]
+Autoscaling applied standard scaling
+
+Will try to keep branch and bound tree memory usage below 59.5GB
+ *** Solution found:  193906.8426   Time:   0    Heuristic: e ***
+ 
+   Its         Obj Value      S   Ninf  Nneg   Sum Dual Inf  Time
+     0           .000000      D     32     0        .000000     0
+    64       152106.9972      D      0     0        .000000     0
+Optimal solution found
+Dual solved problem
+  64 simplex iterations in 0.00 seconds at time 0
+
+Final objective                       : 1.521069972035264e+05
+  Max primal violation      (abs/rel) :       0.0 /       0.0
+  Max dual violation        (abs/rel) :       0.0 /       0.0
+  Max complementarity viol. (abs/rel) :       0.0 /       0.0
+
+Starting root cutting & heuristics
+ 
+ Its Type    BestSoln    BestBound   Sols    Add    Del     Gap     GInf   Time
+a         152125.0275  152106.9972      2                  0.01%       0      0
+b         152118.0845  152106.9972      3                  0.01%       0      0
+q         152112.8162  152106.9972      4                  0.00%       0      0
+k         152111.6653  152106.9972      5                  0.00%       0      0
+a         152108.8766  152108.8766      6                 -0.00%       0      0
+ *** Search completed ***
+Uncrunching matrix
+Final MIP objective                   : 1.521088766293409e+05
+Final MIP bound                       : 1.521088766293410e+05
+  Solution time / primaldual integral :         0s/ 40.632007%
+  Number of solutions found / nodes   :         6 /         1
+  Max primal violation      (abs/rel) : 1.137e-13 / 1.137e-13
+  Max integer violation     (abs    ) : 1.137e-13
+fixing discrete vars and re-solving as an LP.
+FICO Xpress v8.12.4, Hyper, solve started 2:27:12, Dec 5, 2021
+Heap usage: 2418KB (peak 3099KB, 374KB system)
+Minimizing LP GAMS Model with these control settings:
+LPITERLIMIT = 2147483633
+MAXTIME = -2147483647
+THREADS = 1
+MIPABSSTOP = 0
+MIPRELSTOP = 0
+Original problem has:
+       153 rows          243 cols          632 elements
+Presolved problem has:
+         0 rows            0 cols            0 elements
+Presolve finished in 0 seconds
+Heap usage: 2421KB (peak 3099KB, 374KB system)
+ 
+   Its         Obj Value      S   Ninf  Nneg   Sum Dual Inf  Time
+     0       152108.8766      D      0     0        .000000     0
+Uncrunching matrix
+Optimal solution found
+Dual solved problem
+  0 simplex iterations in 0.00 seconds at time 0
+
+Final objective                       : 1.521088766293409e+05
+  Max primal violation      (abs/rel) :       0.0 /       0.0
+  Max dual violation        (abs/rel) :       0.0 /       0.0
+  Max complementarity viol. (abs/rel) :       0.0 /       0.0
+
+fixed LP solved successfully, objective = 152108.876629.
+
+Integer solution proven optimal.
+
+MIP solution  :     152108.876629
+Best possible :     152108.876629
+Absolute gap  :         -0.000000     optca :          0.000000
+Relative gap  :         -0.000000     optcr :          0.000000
+
+--- DICOPT: Starting major iteration 2
+--- DICOPT: Setting up next NLP
+
+CONOPT 3         37.1.0 r07954d5 Released Nov 11, 2021 LEG x86 64bit/Linux    
+
+ 
+ 
+    C O N O P T 3   version 3.17K
+    Copyright (C)   ARKI Consulting and Development A/S
+                    Bagsvaerdvej 246 A
+                    DK-2880 Bagsvaerd, Denmark
+ 
+ 
+   Iter Phase Ninf   Infeasibility   RGmax    NSB   Step InItr MX OK
+      0   0        2.9116264955E-11 (Input point)
+ 
+                   Pre-triangular equations:   153
+                   Post-triangular equations:  0
+ 
+      1   0        0.0000000000E+00 (After pre-processing)
+      2   0        0.0000000000E+00 (After scaling)
+ 
+ ** Feasible solution. Value of objective =    152108.876629
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+      4   3        1.5210887663E+05 0.0E+00     0
+ 
+ ** Optimal solution. There are no superbasic variables.
+ 
+--- DICOPT: Checking convergence
+--- DICOPT: Setting up next MIP
+--- GMO Resort Time 0ms
+--- DICOPT: Log File:
+ Major Major     Objective    CPU time  Itera- Evaluation Solver
+ Step  Iter       Function     (Sec)    tions   Errors
+  NLP    1    152106.99720      0.01       14      0      conopt
+  MIP    1    152108.87663      0.05       67      0      xpress
+  NLP    2    152108.87663<     0.00        4      0      conopt
+
+FICO-Xpress      37.1.0 r07954d5 Released Nov 11, 2021 LEG x86 64bit/Linux    
+
+Xpress Optimizer 38.01
+Xpress Solver 64bit v8.12.4 Oct  7 2021
+(c) Copyright Fair Isaac Corporation 1983-2020. All rights reserved
+Licensed for use by: GAMS Development Corp. for GAMS
+
+--- GMO setup time: 0.00s
+ 
+Reading Problem GAMS Model
+Problem Statistics
+         278 (      0 spare) rows
+         368 (      0 spare) structural columns
+        1271 (    119 spare) non-zero elements
+Global Statistics
+         185 entities        0 sets        0 set members
+FICO Xpress v8.12.4, Hyper, solve started 2:27:12, Dec 5, 2021
+Heap usage: 162KB (peak 162KB, 355KB system)
+Minimizing MILP GAMS Model with these control settings:
+LPITERLIMIT = 2147483562
+MAXTIME = -2147483647
+THREADS = 1
+MIPABSSTOP = 0
+MIPRELSTOP = 0
+Original problem has:
+       278 rows          368 cols         1271 elements       185 globals
+Presolved problem has:
+       113 rows          206 cols          544 elements       154 globals
+LP relaxation tightened
+Presolve finished in 0 seconds
+Heap usage: 295KB (peak 455KB, 358KB system)
+
+Coefficient range                    original                 solved        
+  Coefficients   [min,max] : [ 1.00e+00, 10.00e+03] / [ 1.95e-03,  1.95e+00]
+  RHS and bounds [min,max] : [ 1.00e+00,  7.73e+04] / [ 1.00e+00,  3.79e+03]
+  Objective      [min,max] : [ 1.00e+00,  1.00e+03] / [ 1.00e+00,  4.96e+01]
+Autoscaling applied standard scaling
+
+Will try to keep branch and bound tree memory usage below 59.5GB
+Crash basis containing 26 structural columns created
+ 
+   Its         Obj Value      S   Ninf  Nneg   Sum Dual Inf  Time
+     0           .000000      D     42     0        .000000     0
+   109       152106.9972      D      0     0        .000000     0
+Optimal solution found
+Dual solved problem
+  109 simplex iterations in 0.00 seconds at time 0
+
+Final objective                       : 1.521069972035264e+05
+  Max primal violation      (abs/rel) :       0.0 /       0.0
+  Max dual violation        (abs/rel) :       0.0 /       0.0
+  Max complementarity viol. (abs/rel) :       0.0 /       0.0
+
+Starting root cutting & heuristics
+ 
+ Its Type    BestSoln    BestBound   Sols    Add    Del     Gap     GInf   Time
+a         152127.2490  152106.9972      1                  0.01%       0      0
+q         152108.8766  152106.9972      2                  0.00%       0      0
+
+Performing root presolve...
+
+Reduced problem has:      88 rows     117 columns       313 elements
+Presolve dropped   :      25 rows      89 columns       231 elements
+Presolve tightened :        68 elements
+Will try to keep branch and bound tree memory usage below 59.5GB
+Crash basis containing 25 structural columns created
+ 
+   Its         Obj Value      S   Ninf  Nneg   Sum Dual Inf  Time
+   293       152106.9972      D      0     0        .000000     0
+Optimal solution found
+Dual solved problem
+  293 simplex iterations in 0.00 seconds at time 0
+
+Final objective                       : 1.521069972035264e+05
+  Max primal violation      (abs/rel) :       0.0 /       0.0
+  Max dual violation        (abs/rel) : 8.882e-16 / 8.882e-16
+  Max complementarity viol. (abs/rel) :       0.0 /       0.0
+
+Starting root cutting & heuristics
+ 
+ Its Type    BestSoln    BestBound   Sols    Add    Del     Gap     GInf   Time
+ *** Search completed ***
+Uncrunching matrix
+Final MIP objective                   : 1.521088766293409e+05
+Final MIP bound                       : 1.521087245223437e+05
+  Solution time / primaldual integral :         0s/ 31.089549%
+  Number of solutions found / nodes   :         2 /         1
+  Max primal violation      (abs/rel) : 3.654e-11 / 4.567e-14
+  Max integer violation     (abs    ) :       0.0
+fixing discrete vars and re-solving as an LP.
+FICO Xpress v8.12.4, Hyper, solve started 2:27:12, Dec 5, 2021
+Heap usage: 2476KB (peak 5484KB, 375KB system)
+Minimizing LP GAMS Model with these control settings:
+LPITERLIMIT = 2147483562
+MAXTIME = -2147483647
+THREADS = 1
+MIPABSSTOP = 0
+MIPRELSTOP = 0
+Original problem has:
+       278 rows          368 cols         1271 elements
+Presolved problem has:
+         0 rows            0 cols            0 elements
+Presolve finished in 0 seconds
+Heap usage: 2481KB (peak 5484KB, 375KB system)
+ 
+   Its         Obj Value      S   Ninf  Nneg   Sum Dual Inf  Time
+     0       152108.8766      D      0     0        .000000     0
+Uncrunching matrix
+Optimal solution found
+Dual solved problem
+  0 simplex iterations in 0.00 seconds at time 0
+
+Final objective                       : 1.521088766293410e+05
+  Max primal violation      (abs/rel) :       0.0 /       0.0
+  Max dual violation        (abs/rel) :       0.0 /       0.0
+  Max complementarity viol. (abs/rel) :       0.0 /       0.0
+
+fixed LP solved successfully, objective = 152108.876629.
+
+Integer solution proven optimal.
+
+MIP solution  :     152108.876629
+Best possible :     152108.724522
+Absolute gap  :          0.152107     optca :          0.000000
+Relative gap  :          0.000001     optcr :          0.000000
+
+--- DICOPT: Starting major iteration 3
+--- DICOPT: Setting up next NLP
+
+CONOPT 3         37.1.0 r07954d5 Released Nov 11, 2021 LEG x86 64bit/Linux    
+
+ 
+ 
+    C O N O P T 3   version 3.17K
+    Copyright (C)   ARKI Consulting and Development A/S
+                    Bagsvaerdvej 246 A
+                    DK-2880 Bagsvaerd, Denmark
+ 
+ 
+   Iter Phase Ninf   Infeasibility   RGmax    NSB   Step InItr MX OK
+      0   0        1.2434497876E-14 (Input point)
+ 
+                   Pre-triangular equations:   153
+                   Post-triangular equations:  0
+ 
+      1   0        0.0000000000E+00 (After pre-processing)
+      2   0        0.0000000000E+00 (After scaling)
+ 
+ ** Feasible solution. Value of objective =    152108.876629
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+      4   3        1.5210887663E+05 0.0E+00     0
+ 
+ ** Optimal solution. There are no superbasic variables.
+ 
+--- DICOPT: Checking convergence
+--- DICOPT: Search stopped on worsening of NLP subproblems
+--- DICOPT: Log File:
+ Major Major     Objective    CPU time  Itera- Evaluation Solver
+ Step  Iter       Function     (Sec)    tions   Errors
+  NLP    1    152106.99720      0.01       14      0      conopt
+  MIP    1    152108.87663      0.05       67      0      xpress
+  NLP    2    152108.87663<     0.00        4      0      conopt
+  MIP    2    152108.87663      0.03      319      0      xpress
+  NLP    3    152108.87663      0.00        4      0      conopt
+--- DICOPT: Terminating...
+--- DICOPT: Stopped on NLP worsening
+
+      The search was stopped because the objective function
+      of the NLP subproblems started to deteriorate.
+
+--- DICOPT: Best integer solution found: 152108.876629
+--- Reading solution for model transportation[LST:25]
+--- Executing after solve: elapsed 0:00:00.138[LST:653]
+--- MODEL.gms(90) 4 Mb[FIL:"/var/lib/condor/execute/dir_40972/gamsexec/MODEL.gms",90,0]
+--- GDX File /var/lib/condor/execute/dir_40972/gamsexec/out.gdx[FIL:"/var/lib/condor/execute/dir_40972/gamsexec/out.gdx",0,0]
+*** Status: Normal completion[LST:716]
+--- Job MODEL.gms Stop 12/05/21 02:27:12 elapsed 0:00:00.140
